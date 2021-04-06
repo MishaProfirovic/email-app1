@@ -1,0 +1,25 @@
+<h2>User Details</h2>
+
+<div *ngIf="user">
+  <td>Firstname</td>
+  <td> <input [(ngModel)]="name" name="name" type="text"></td>
+    <p></p>
+    <td>Email</td>
+    <td> <input [(ngModel)]="email" email="email" type="text"></td>
+    <p></p>
+    <button (click)="addUser()">Submit</button>
+</div>
+
+<h4> Get person </h4>
+<input [(ngModel)]="queryKey" name="queryKey" type="text"><br>
+<button (click)="getPerson(queryKey)"> Get </button>
+<h4>Result</h4>
+{{queryResult}}
+<h4> Delete person</h4>
+  <input [(ngModel)]="removeKey" name="removeKey" type="text"> <br>
+  <button (click)="deletePerson(removeKey)"> Delete </button>
+<h4> Reset store </h4>
+<button (click)="reset()"> Reset </button>
+
+
+
